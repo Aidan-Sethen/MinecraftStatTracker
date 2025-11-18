@@ -47,7 +47,7 @@ form{
 
 label{
     font-weight: bold;
-    background-color: #6146376c;
+    background-color: none;
     border-radius: 5px;
     color: rgb(255, 255, 255);
     display: inline;
