@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Data Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "script.js" defer></script>
+
+    <!--Adding a favIcon-->
+    <link rel="icon" href="minecraft.png" type="image/x-icon">
+
+</head>
+    <body>
+        <!-- MAIN INPUT PAGE | Page that takes all of the user inputs. -->
+        <div id="formPage">
+            <form id="generator" method="get"> 
+                <div id="fieldsetWrapper">
+                    <fieldset>
+
+                        <legend>World Details</legend>
+
+                        <div id="title">
+                            <label for="worldName">World Name</label>
+                            <input name="world" id="worldName" type="text" required/>
+                        </div>
+
+                        <div id="houses">
+                            <div class="house">
+                                <label>House Name</label>
+                                <input type="text" name="house0" class="houseName" required />
+                                
+                                <label>X Coordinate</label>
+                                <input type="number" name="x0" class="houseX" required />
+                                
+                                <label>Z Coordinate</label>
+                                <input type="number" name="z0" class="houseZ" required />
+
+                                <button class="remove" type="button" onclick="removeHouse(this)">Remove House</button>
+                            </div>
+                        </div>
+                        <button class="add" type="button" onclick="addHouse()">Add House</button>         
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Items/Bosses</legend>
+
+                        <div id="rareItems">
+                            <div class="rareItem">
+                                <label>Rare items?</label>
+                                <input type="text" name="item0" class="item" required />
+                                <button class="remove" type="button" onclick="removeItem(this)">Remove Rare Item</button>
+                            </div>
+                        </div>
+                        <button class="add" type="button" onclick="addItem()">Add Rare Item</button>
+
+                        <div id="bossesDefeated">
+                            <label>Bosses Defeated</label>
+
+                            <br>
+                            <br>
+
+                            <label>The EnderDragon</label>
+                            <input type="checkbox" name="enderdragon" value="EnderDragon" />
+
+                            <label>The Wither</label>
+                            <input type="checkbox" name="wither" value="Wither" />
+
+                            <label>The Elder Guardian</label>
+                            <input type="checkbox" name="elderguardian" value="ElderGuardian" />
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Player Stats/Info</legend>
+
+                        <div id="players">
+                            <div class="player">
+                                <label>Player Name</label>
+                                <input type="text" name="player0" class="player" required />
+                                <button class="remove" type="button" onclick="removePlayer(this)">Remove Player</button>
+                            </div>
+                        </div>
+                        <button class="add" type="button" onclick="addPlayer()">Add Player</button>
+                        
+                    </fieldset>
+                </div>
+            
+                <div id="button">
+                    <h1 id="button_text" onclick="document.getElementById('generator').submit()">Generate!</h1>
+                </div>
+            </form>
+        </div>
+
+        <!-- DISPLAY PAGE | Page that displays all inputted data -->
+        <div id="displayPage">
+            <div id="displayContainer">
+                <h1 id="displayWorldName"></h1>
+
+                <table id="itemsTable">
+                    <tr>
+                        <th>Rare Items</th>
+                    </tr>
+                </table>
+
+                <div id="mapSection">
+                    <canvas id="mapCanvas" width="600" height="600"></canvas>
+                    <div id="coordsList"></div>
+                </div>
+
+                <table id="bossesTable">
+                    <tr>
+                        <th>Bosses Defeated</th>
+                    </tr>
+                </table>
+
+                <table id="playersTable">
+                    <tr>
+                        <th>Players</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

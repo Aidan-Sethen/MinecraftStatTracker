@@ -1,0 +1,254 @@
+*{
+    font-family: "VT323", monospace;
+}
+body{
+    background-image: url('dirtminecraft.png');
+}
+
+#fieldsetWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 8%;
+}
+
+fieldset{
+    background-image: url('wood.png');
+    background-repeat: repeat;
+    background-size: 52px 52px;
+    width: 25vw;
+    height: 50vh;
+    margin: 0;
+    overflow-y: auto;
+    border-radius: 3%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(75, 63, 50, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+legend{
+    font-weight: bold;
+    color: blanchedalmond;
+    background-color: #4a3520;
+    border-color: antiquewhite;
+    border-radius: 10%;
+}
+
+input{
+    width: 95%;
+    background-color: rgba(75, 63, 50, 0.849);
+    color: rgb(255, 255, 255);
+    display:block;
+    margin-bottom: 2%;
+}
+
+form{
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+    background-color: #6146376c;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    display: inline;
+    margin: auto;
+}
+
+.item-icon {
+    width: 24px;
+    height: 24px;
+}
+
+#button{
+    border-radius: 10px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5%;
+}
+
+#button_text:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+#button_text{
+    text-align: center;
+    user-select: none;  
+    color:white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: auto;
+    margin: auto;  
+    display: inline; 
+}
+button{
+    border-radius: 10px;
+    display:block;
+    font-family: "VT323", monospace;
+}
+#title{
+    padding-bottom: 10%;
+}
+.remove{
+    margin: auto;
+    background-color: rgba(184, 122, 122, 0.5);
+}
+.add{
+    background-color: rgba(168, 192, 159, 0.5);
+    margin: auto;
+}
+.house{
+    padding-bottom: 5%;
+}
+
+#displayContainer {
+    min-height: 100vh;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "displayWorldName displayWorldName"
+                         "mapSection playersTable" 
+                         "mapSection itemsTable"
+                         "mapSection bossesTable" ;
+    flex-direction: column;
+    gap: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    #displayContainer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "displayWorldName"
+            "mapSection"
+            "playersTable"
+            "itemsTable"
+            "bossesTable";
+    }
+}
+
+
+#displayWorldName{
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    padding: 0.8em;
+    background-color: rgba(75, 63, 50, 0.7);
+    border-radius: 12px;
+    border: 3px solid #4a3520;
+    max-width: 700px;
+    margin: 0 auto;
+    grid-area: displayWorldName;
+}
+
+#contentWrapper {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#mapSection{
+    background-color: rgba(75, 63, 50, 0.7);
+    border: 3px solid #4a3520;
+    border-radius: 12px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    grid-area: mapSection;
+}
+
+#itemsTableSection{
+    grid-area: itemsTableSection;
+}
+
+#playersTable{
+    grid-area: playersTable;
+}
+
+#bossesTable{
+    grid-area: bossesTable;
+}
+
+canvas {
+    border: 3px solid #4a3520;
+    background-image: url('darkmap.png');
+    background-color: #654321;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    image-rendering: pixelated;
+}
+
+#mapCanvas{
+    width: 600px;
+    height: 600px;
+}
+
+#coordsList {
+    text-align: left;
+    font-size: 22px;
+    color: white;
+    line-height: 1.8;
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#sidebarWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    flex-wrap: wrap;
+    order: 2;
+    align-items: flex-start;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: rgba(75, 63, 50, 0.85);
+    border: 3px solid #4a3520;
+    border-radius: 10px;
+    overflow: hidden;
+    width: auto;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border-bottom: 2px solid #4a3520;
+    padding: 14px 22px;
+    color: white;
+    font-size: 22px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(50, 40, 30, 0.95);
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 3px solid #4a3520;
+}
+
+td:last-child {
+    border-bottom: none;
+}
+
+h1{
+    text-align: center;
+    color:white;
+}
+
+.hidden{
+    display: none;
+}
