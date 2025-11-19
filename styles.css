@@ -252,3 +252,54 @@ h1{
 .hidden{
     display: none;
 }
+@media screen and (max-width: 768px){
+    #fieldsetWrapper{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "houseFieldSet"
+            "itemsBossesFieldSet"
+            "playersFieldSet"
+            "GenerateButton";
+        gap: 5%;
+        margin-top: 8%;
+    }
+}
+
+#houseWrapper{
+    grid-area: houseFieldSet;
+}
+
+#itemsBossesWrapper{
+    grid-area: itemsBossesFieldSet;
+}
+
+#playerWrapper{
+    grid-area: playersFieldSet;
+}
+
+#button_text{
+    grid-area: GenerateButton;
+}
+
+@media screen and (max-width: 768px) {
+    #houseWrapper{
+        grid-area: houseFieldSet;
+    }
+}
+@media screen and (max-width: 768px) {
+    #itemsBossesWrapper{
+        grid-area: itemsBossesFieldSet;
+    }
+}
+@media screen and (max-width: 768px) {
+    #playerWrapper{
+        grid-area: playersFieldSet;
+    }
+}
+@media screen and (max-width: 768px) {
+    #button_text{
+        grid-area: GenerateButton;
+    }
+}
