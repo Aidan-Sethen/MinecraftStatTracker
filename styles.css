@@ -33,7 +33,7 @@ legend{
     border-radius: 10%;
 }
 
-#worldName{
+#worldName, #rareItemsInput {
         background-color: rgba(75, 63, 50, 0.849);
 }
 
