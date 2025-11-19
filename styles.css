@@ -33,6 +33,10 @@ legend{
     border-radius: 10%;
 }
 
+#worldName{
+        background-color: rgba(75, 63, 50, 0.849);
+}
+
 input{
     width: 95%;
     background-color: rgba(75, 63, 50, 0.849);
