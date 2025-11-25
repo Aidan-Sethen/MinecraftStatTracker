@@ -253,6 +253,26 @@ h1{
     color:white;
 }
 
+a{
+    text-align: center;
+    user-select: none;  
+    color:white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: auto;
+    margin: auto;  
+    display: inline-block; 
+    padding: 5px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
 .hidden{
     display: none;
 }
