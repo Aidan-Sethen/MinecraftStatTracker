@@ -153,7 +153,16 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
     {
         let mainRow = playersTable.insertRow();
         let cell = mainRow.insertCell();
-        cell.textContent = url.get('player' + k);
+        //cell.textContent = url.get('player' + k);
+        let newLink = document.createElement('a');
+        newLink.href = `https://minecraftuuid.com/player/${url.get('player' + k)}`;
+        newLink.target = '_blank';
+        newLink.textContent = url.get('player' + k);
+        newLink.style.color = 'white';
+        newLink.style.textDecoration = 'none';
+        newLink.style.padding = '0px';
+
+        cell.appendChild(newLink);
 
         let img = document.createElement('img');
         img.className = 'item-icon';
