@@ -1,6 +1,15 @@
-*{
-    font-family: "VT323", monospace;
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+*{
+    font-family: "MinecraftFont", "Courier New", monospace;
+}
+
 body{
     background-image: url('dirtminecraft.png');
 }
@@ -10,6 +19,16 @@ body{
     justify-content: center;
     gap: 2%;
     margin-top: 8%;
+}
+
+input:focus:invalid {
+    border: 2px solid #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+}
+
+input:focus:valid {
+    border: 2px solid #44ff44;
+    background-color: rgba(68, 255, 68, 0.05);
 }
 
 fieldset{
@@ -23,6 +42,10 @@ fieldset{
     border-radius: 3%;
     scrollbar-width: thin;
     scrollbar-color: rgba(75, 63, 50, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+footer {
+    padding-top: 100px;
 }
 
 legend{
@@ -61,6 +84,29 @@ label{
 .item-icon {
     width: 24px;
     height: 24px;
+    cursor: pointer;
+}
+
+.item-icon:hover {
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 #button{
@@ -91,7 +137,6 @@ label{
 button{
     border-radius: 10px;
     display:block;
-    font-family: "VT323", monospace;
 }
 #title{
     padding-bottom: 10%;
@@ -257,8 +302,6 @@ a{
     text-align: center;
     user-select: none;  
     color:white;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
     width: auto;
     margin: auto;  
     display: inline-block; 
@@ -268,7 +311,7 @@ a{
 }
 
 a:hover{
-    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0.75;
     justify-content: center;
     align-items: center;
 }

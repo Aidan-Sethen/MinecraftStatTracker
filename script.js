@@ -68,7 +68,7 @@ function removeItem(button) //same as house
 function addPlayer() //same as house
 {
     let container = document.getElementById('players');
-    let newPlayer = document.createElement('player');
+    let newPlayer = document.createElement('div');
 
     newPlayer.className = 'player';
     newPlayer.innerHTML = `<label>Player Name</label>
@@ -98,7 +98,6 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
     //swap the visibility of our pages.
     document.getElementById('formPage').style.display = 'none';
     document.getElementById('displayContainer').style.display = 'grid';
-    document.getElementById('button_text').style.display = 'none';
     
     //url.get returns the value after the '=' in a url chunk. so url.get('world) grabs 'world=braxtonsworld' and returns braxtonsworld.
     var worldName = url.get('world');

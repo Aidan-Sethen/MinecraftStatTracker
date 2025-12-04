@@ -1,59 +1,40 @@
-<!-- Assigning the Doctype as HTML-->
 <!DOCTYPE html>
 <html lang ="en">
 
-<!-- Navigate back to the main page of the site-->
-<!-- Countdown until the next major minecraft update-->
-<!-- Adding the minecraft font to the help page -->
-<!-- Troubleshooting the favicon-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href ="HelpPage.css">
+  <script src = "helpscript.js" defer></script>
+  <link rel="icon" href="bookshelf.png" type="image/x-icon">
+</head>
 
+  <body>
+    <div>
+      <div id = "head">
+        <img id = "help-icon" src="helppage.png" alt="Help Icon" width="466" height="78">
+        <!--<img id = "minecraft-link" src="helppage.png" href="https://www.minecraft.net/en-us" alt="Minecraft" width="50" height="50">-->
+      </div>
 
-<header>
+      <iframe id ="iframe-container-1" title ="Tutorial"
+      src ="https://www.youtube.com/embed/U0sSDKDQBNw">
+      Your browser does not support iframes, missing tutorial
+      </iframe>
 
-    <link rel="stylesheet" href ="HelpPage.css">
+      <iframe id ="iframe-container-2" title ="Other Video"
+      src ="https://www.youtube.com/embed/ysl3MsTkk78">
+      Your browser does not support iframes, missing showcase
+      </iframe>
 
-
-    <!-- Adding a favicon icon for the webpage-->
-     <link rel="icon" href="bookshelf.png" type="image/x-icon">
-
-</header>
-
-<body>
-    <h1>Help Page</h1>
-
-    <!-- Adding a video link-->
-    <iframe class ="iframe-container" title ="Minecraft Video Tutorial"
-    src ="https://www.youtube.com/embed/L65kb6qjwiM" origin=youtube.com allowfullscreen strict-origin-when-cross-origin>
-    Your browser does not support iframes, missing Minecraft Tutorial
-    </iframe>
-
-<fieldset>
-    <!-- Adding 4 flex-containers to contain helpfull tips-->
-  <div class="flex-container">
-    <div class="box"><h3>Defating Bosses <br></h3>
-    When you have defeated a boss, simply check the checkbox at start of the page, 
-    and it will be added.
-    Haven't conquered all bosses yet, no worries! Just get out there and shown
-    them who rules the Owerworld, Nether and End.
-        </div>
-    <div class="box"><h3>More than 1 House?</h3><br>
-    You can always add more than 1 house to the overview, simply click the "Add House"
-    after inputting each house.
+      <div id = "explain">
+        <a id = "minecraft-link" href="index.html" width="300" height="40">
+          <img src="JavaCreateNewWorld.jpg" alt="Generate New World!" width="300" height="40">
+        </a>
+      </div>
     </div>
-    <div class="box"><h3>Rare Items</h3> <br>
-    There is no right and wrong in having rare items. Use the "Add Item" to each all the 
-    items you find important in your minecraft world.
-    Whether it be Netherrite gear, or a signed book</div>
-    <div class="box"><h3>Still Curios?</h3> <br>
-        Feel free to acces our Q&A with answers to the most commonly asked questions
-        <a href="Q&A">A full Q&A section</a>
-    </div>
-  </div>
-</fieldset>
 
-</body>
-
-<footer>
-
-</footer>
+    <footer id = "footer">
+      <p id = "p">All rights reserved &#174 Braxton Wyssen, Aidan Sethen, Soren S.</p>
+    </footer>
+  </body>
 </html>

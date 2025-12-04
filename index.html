@@ -83,7 +83,7 @@
                         <div id="players">
                             <div class="player">
                                 <label>Player Name</label>
-                                <input type="text" name="player0" class="player" required />
+                                <input type="text" name="player0" class="playerName" required />
                                 <button class="remove" type="button" onclick="removePlayer(this)">Remove Player</button>
                             </div>
                         </div>
@@ -92,12 +92,15 @@
                     </fieldset>
                     </div>
                 </div>
-            
-                <div id="button">
-                    <h1 id="button_text" onclick="document.getElementById('generator').submit()">Generate!</h1>
-                </div>
 
-                <a href = "HelpPage.html">Help?</a>
+                <footer>
+                    <a id = "minecraft-link" href="HelpPage.html" width="360" height="36">
+                        <img src="HelpPageImage.png" alt="Help Page!" width="360" height="36">
+                    </a>
+                    <a id = "minecraft-link" width="360" height="36" onclick="document.getElementById('generator').submit()">
+                        <img src="generateworld.png" alt="Generate New World!" width="360" height="36">
+                    </a>
+                </footer>
             </form>
         </div>
 
@@ -128,6 +131,9 @@
                         <th>Players</th>
                     </tr>
                 </table>
+                <a id = "minecraft-link" href="index.html" width="300" height="40">
+                    <img src="JavaCreateNewWorld.jpg" alt="Generate New World!" width="300" height="40">
+                </a>
             </div>
         </div>
     </body>

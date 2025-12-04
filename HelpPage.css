@@ -1,66 +1,81 @@
+@font-face {
+    font-family: 'MinecraftFont';
+    src: url('Minecraft.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 *{
-    font-family: "VT323", monospace;
+    font-family: "MinecraftFont", "Courier New", monospace;
 }
+
 body{
-    margin: 0;
-     background-image: url('bookshelf.png');
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Styling h1 Heading */
-h1 {
-    text-align: center;
+html{
+  background-image: url('bookshelf.png');
 }
 
-/* 
-
-
-/* Styling the video link */
-.iframe-container {
-    display: block;
-    margin: 0 auto;
-
-    align-items: center;
-    padding: 50px;
-    height: auto;
-    width: 60%;
-    max-width: 600px;
-    aspect-ratio: 16 / 9;
-
-    border: 5px steelblue solid;
-    border-radius: 8 px;
+#help-icon {
+  margin: 0 auto;
+  padding-top: 10px;
+  display: block;
 }
 
-     /* Flex container */
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;          /* Allows wrapping on smaller screens */
-      justify-content: center;  /* Centers items horizontally */
-      gap: 20px;                /* Space between containers */
-      padding: 20px;
-    }
+#iframe-container-1{
+  display: inline;
+  margin: 0 auto;
 
-    /* Individual text containers */
-    .box {
-      flex: 1 1 200px;          /* Grow/shrink, min width 200px */
-      max-width: 300px;         /* Prevents boxes from getting too wide */
-      border: 2px solid steelblue;
-      background-image: url('wood.png');
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    }
+  align-items: center;
+  padding: 50px;
+  height: auto;
+  width: 50%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  box-shadow: inset;
+  float: left;
+}
+#iframe-container-2{
+  display: inline;
+  margin: 0 auto;
 
-    /* Consistenct styling across web-pages*/
-      fieldset{
-    background-image: url('wood.png');
-    background-repeat: repeat;
-    background-size: 52px 52px;
-    width: 75vw;
-    height: auto;
-    margin: 0 auto;
-    overflow-y: auto;
-    border-radius: 3%;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(75, 63, 50, 0.8) rgba(255, 255, 255, 0.1);
-    margin-top: 8%; }
+  align-items: center;
+  height: auto;
+  padding: 50px;
+  width: 50%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  box-shadow: inset;
+  float: right;
+}
+
+#explain{
+  flex-direction: column;
+  text-align: center;
+}
+
+p{
+  overflow-wrap: break-word;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(75, 63, 50, 0.8);
+  color: white;
+  width: 100%;
+  margin-top: auto;
+}
+
+#minecraft-link:hover {
+  opacity: 0.75;
+
+}
