@@ -166,15 +166,19 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
         let img = document.createElement('img');
         img.className = 'item-icon';
 
-        let uuid = returnJSON(url.get('player' + k));
+        fetch(`https://playerdb.co/api/player/minecraft/${url.get('player' + k)}`)
+        .then(function(response) {
+            return response.json();  // ← THIS PARSES THE JSON TEXT
+        })
+        .then(function(data) {
+            let uuid = data.data.player.id;      // ← NOW YOU CAN READ VALUES
 
-        //let link = `https://playerdb.co/api/player/minecraft/${url.get('player' + k)}`;
-        
-        //uuid = JSON.parse(link.data.player.id);
-
-        console.log(uuid);
-
-        img.src = `https://api.mineatar.io/face/${uuid}`;
+            if(uuid != undefined){
+                img.src = `https://api.mineatar.io/face/${uuid}`;
+            }else{
+                img.src = 'steve.jpg';
+            }
+        });
 
         cell.appendChild(img);
 
@@ -266,15 +270,4 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
     }
     
     document.getElementById('coordsList').innerHTML = houseList;
-}
-
-function returnJSON(username){
-     fetch("https://playerdb.co/api/player/minecraft/" + username)
-     .then(function(response) {
-        return response.json();  // ← THIS PARSES THE JSON TEXT
-     })
-     .then(function(data) {
-         let uuid = data.data.player.id;      // ← NOW YOU CAN READ VALUES
-         return uuid;
-     });
 }
