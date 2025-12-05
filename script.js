@@ -140,8 +140,9 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
 
         let img = document.createElement('img');
         img.className = 'item-icon';
-        img.src = 'emerald.png';
-        img.style.padding = '0px';  
+
+        img.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.21.8/assets/minecraft/textures/item/${url.get('item' + j).replace(/ /g, '_')}.png`;
+        img.style.padding = '0px'; 
 
         cell.appendChild(img);
 

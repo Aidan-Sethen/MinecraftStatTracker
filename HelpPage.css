@@ -25,6 +25,8 @@ html{
   margin: 0 auto;
   padding-top: 10px;
   display: block;
+  clear: both;
+
 }
 
 #iframe-container-1{
@@ -59,6 +61,15 @@ html{
 #explain{
   flex-direction: column;
   text-align: center;
+  clear: both;
+}
+
+#mc-link:visited{
+  color:green;
+}
+
+#mc-link{
+  color:white;
 }
 
 p{
