@@ -33,6 +33,7 @@ function removeHouse(button) //removes house button clicked parent obj.
 
     if(houses.getElementsByClassName('house').length > 1){
         button.parentElement.remove();
+        houseCount--;
     }
     else{
         alert('not enough elements to remove');
@@ -59,6 +60,7 @@ function removeItem(button) //same as house
 
     if(items.getElementsByClassName('rareItem').length > 1){
         button.parentElement.remove();
+        itemCount--;
     }
     else{
         alert('not enough elements to remove');
@@ -85,6 +87,7 @@ function removePlayer(button) //same as house
 
     if(players.getElementsByClassName('player').length > 1){
         button.parentElement.remove();
+        playerCount--;
     }
     else{
         alert('not enough elements to remove');
@@ -129,7 +132,7 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
         let mainRow = itemsTable.insertRow();
         let cell = mainRow.insertCell();
         let newLink = document.createElement('a');
-        newLink.href = 'https://minecraft.wiki/w/' + url.get('item' + j).replace(/ /g, '_');
+        newLink.href = 'https://minecraft.wiki/w/' + url.get('item' + j).replace(/ /g, '_').toLowerCase();
         newLink.target = '_blank';
         newLink.textContent = url.get('item' + j);
         newLink.style.color = 'white';
@@ -141,7 +144,7 @@ if (url.get('world')) //if our url has world in it (it does once the data is sub
         let img = document.createElement('img');
         img.className = 'item-icon';
 
-        img.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.21.8/assets/minecraft/textures/item/${url.get('item' + j).replace(/ /g, '_')}.png`;
+        img.src = `https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.21.8/assets/minecraft/textures/item/${url.get('item' + j).replace(/ /g, '_').toLowerCase()}.png`;
         img.style.padding = '0px'; 
 
         cell.appendChild(img);
